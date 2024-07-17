@@ -116,8 +116,6 @@ def create_ico_file(resized_images: Dict[int, Image.Image], resources_dir: str, 
     sorted_sizes.reverse()
     sorted_images.reverse()
 
-    print(f"Sizes: {sorted_sizes} Images: {sorted_images}")
-
     sorted_images[0].save(
         ico_path,
         format='ICO',
