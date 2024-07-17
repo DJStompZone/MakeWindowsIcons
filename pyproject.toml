@@ -5,6 +5,8 @@ description = "Easily create all appropriate icon sizes for a Windows app from a
 authors = ["DJ Stomp"]
 license = "MIT"
 readme = "README.md"
+repository = "https://github.com/djstompzone/MakeWindowsIcons"
+
 
 [tool.poetry.dependencies]
 python = "^3.11"
