@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "makewindowsicons"
-version = "0.1.17"
+version = "0.1.18"
 description = "Easily create all appropriate icon sizes for a Windows app from a single source image"
 authors = ["DJ Stomp"]
 license = "MIT"
