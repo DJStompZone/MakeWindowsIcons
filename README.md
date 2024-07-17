@@ -24,7 +24,7 @@ python3 -m pip install makewindowsicons
 ## Usage
 
 ```sh
-python3 -m makewindowsicons <input_image> <app_name> [--output_dir <output_directory>] [--no_dir] [-s <size>]...
+python3 -m makewindowsicons -i <input_image> -a <app_name> [-o <output_directory>] [--no_dir] [-s <size>]...
 ```
 
 ### Arguments
