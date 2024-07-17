@@ -11,7 +11,7 @@ This script resizes a given image to various sizes and creates a set of icons fo
 
 ## Requirements
 
-- Python 3.11+
+- Python 3.10+
 
 ## Installation
 
