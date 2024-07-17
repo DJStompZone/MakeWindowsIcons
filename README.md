@@ -29,14 +29,14 @@ python3 -m makewindowsicons <input_image> <app_name> [--output_dir <output_direc
 
 ### Arguments
 
-- `<input_image>`: Path to the source image.
+- `-i <input_image>`, `--input_image <input_image>`: Path to the source image.
 
 ### Options
 
-- `<app_name>`: Name of the application. Default is 'app'.
-- `--output_dir <output_directory>`: Directory to save the output resources. Default is the current directory.
-- `--no_dir`: Do not create a 'resources' directory; save images directly to the specified output directory.
-- `-s <size>`, `--size <size>`: Additional sizes to resize the image to. Can be specified multiple times.
+- `-a <app_name>`, `--app_name <app_name>`: Name of the application. Default is 'app'.
+- `-o <output_directory>`, `--output_dir <output_directory>`: Directory to save the output resources. Default is the current directory.
+- `-n`, `--no_dir`: Do not create a 'resources' directory; save images directly to the specified output directory.
+- `-s <size>`, `--size <size>`: Optional additional sizes to resize the image to. Can be specified multiple times. Sizes over 256px will be ignored, as this is the largest size supported by Windows for .ICO files.
 
 ### Examples
 
@@ -45,7 +45,7 @@ python3 -m makewindowsicons <input_image> <app_name> [--output_dir <output_direc
    Resize the image to the default sizes and save in the `resources` directory within the current directory:
 
    ```sh
-   python3 -m makewindowsicons your_source_image.png YourAppName
+   python3 -m makewindowsicons -i your_source_image.png -a YourAppName
    ```
 
 2. **Specify output directory**:
@@ -53,7 +53,7 @@ python3 -m makewindowsicons <input_image> <app_name> [--output_dir <output_direc
    Resize the image to the default sizes and save in the `resources` directory within the specified output directory:
 
    ```sh
-   python3 -m makewindowsicons your_source_image.png YourAppName --output_dir output_path
+   python3 -m makewindowsicons -i your_source_image.png -a YourAppName -o output_path
    ```
 
 3. **Without creating `resources` directory**:
@@ -61,15 +61,15 @@ python3 -m makewindowsicons <input_image> <app_name> [--output_dir <output_direc
    Resize the image to the default sizes and save directly in the specified output directory:
 
    ```sh
-   python3 -m makewindowsicons your_source_image.png YourAppName --output_dir output_path --no_dir
+   python3 -m makewindowsicons -i your_source_image.png -a YourAppName -o output_path -n
    ```
 
 4. **Add additional sizes**:
 
-   Resize the image to the default sizes plus additional sizes (e.g., 37px, 69px, 420px) and save in the `resources` directory within the specified output directory:
+   Resize the image to the default sizes plus additional sizes (e.g., 37px, 69px) and save in the `resources` directory within the specified output directory:
 
    ```sh
-   python3 -m makewindowsicons your_source_image.png YourAppName --output_dir output_path -s 32 -s 72 -s 128
+   python3 -m makewindowsicons -i your_source_image.png -a YourAppName -o output_path -s 42 -s 69 -s 77
    ```
 
 ## Contributing
